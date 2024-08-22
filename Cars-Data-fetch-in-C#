@@ -1,0 +1,34 @@
+using System;
+
+public class Cars
+{
+    private string make;
+    private string model;
+
+    public Cars(string make, string model)
+    {
+        this.make = make;
+        this.model = model;
+    }
+
+    public string GetMake()
+    {
+        return make;
+    }
+
+    public string GetModel()
+    {
+        return model;
+    }
+
+    public string Display()
+    {
+        return $"Make: {this.GetMake()}, Model: {this.GetModel()}";
+    }
+
+    public static void Main()
+    {
+        Cars c = new Cars("Toyota", "Honda");
+        Console.WriteLine(c.Display());
+    }
+}
